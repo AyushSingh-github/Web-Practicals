@@ -1,0 +1,64 @@
+<html>
+<body onload="startTime()">
+<FORM name="FRM1" method="post">
+<script type = "text/javascript">
+	var browser_name = navigator.appName;
+	alert("Hello "+ browser_name+" user");
+	var name=prompt("What is your name?","Enter your name here")
+	window.document.write("Welcome "+name+"<br>");
+
+// DATE 
+	var date = new Date();
+	var dd = date.getDate();
+	if (10 > dd) 
+		dd = '0' + dd;
+	var mm = date.getMonth()+1;
+	if (10 > mm) 
+		mm = '0' + mm;
+	var yyyy = date.getFullYear();
+	document.write("<BR>Current Date is: "+dd+"-"+mm+"-"+yyyy);
+
+// Time in 12 hour format
+	document.write("<BR>Current Time is: ");
+	var hh=date.getHours();
+	if(12 > hh)
+		{ampm="AM"}
+	else
+		{hh = hh - 12;
+		ampm="PM"}
+	if(10 > hh)
+		hh = '0' + hh;
+	var min=date.getMinutes();
+	if(10 > min)
+		min = '0' + min;
+	var sec = date.getSeconds();
+	if(10 > sec)
+		sec = '0' + sec;
+	document.write(hh+":"+min+":"+sec+ampm);
+var c =prompt("Enter your favorite color");
+window.document.bgColor=c;
+
+// Digital clock
+function startTime() {
+  var today = new Date();
+  var h = today.getHours();
+  var m = today.getMinutes();
+  var s = today.getSeconds();
+  m = checkTime(m);
+  s = checkTime(s);
+  document.getElementById('txt').innerHTML =
+  h + ":" + m + ":" + s;
+  var t = setTimeout(startTime, 500);
+}
+function checkTime(i) {
+  if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
+  return i;
+}
+</script>
+<pre>
+<img src="images/Desert.jpg" height=200 width=200 name="images" onMouseOver="images.src='images/Jellyfish.jpg'" onMouseOut="images.src='images/Desert.jpg'">
+<a href="#" onMouseOver="alert('You are on link')">Try to click me</a>
+Digital Clock <div id="txt"></div>
+
+
+</FORM>

@@ -1,0 +1,74 @@
+<html lang="en">
+<head>
+    <title>REGISTRATION FORM</title>
+    <link rel="stylesheet" href="lab-4.css">
+    <script type="text/Javascript" src="lab-4.js">
+    </script>
+   
+</head>
+
+<body>
+    <h3>Name: Ayush Singh<br />Roll no:1901640130021</h3>
+<div>
+    <form action="#" name="FORM" method="POST" onload="resetfield();">
+        <table>
+            <caption><h2>REGISTRATION FORM</h2></caption>
+            <tr>
+                <td>Name</td>
+                <td colspan="2"><input type="text" id="name" placeholder="Enter your name" value=""></td>
+                <td><div id="nameerr" style="color: red;"></div></td>
+            </tr>
+            <tr>
+                <td>Date of Birth</td>
+                <td colspan="2"><input type="date" id="date" ></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Mobile</td>
+                <td colspan="2"><input type="tel" id="mobile" placeholder="Enter valid phone number" maxlength="10"></td>
+                <td><div id="moblieerr" style="color: red;"></div></td>
+            </tr>
+            <tr>
+                <td>Gender</td>
+                <td ><input type="radio" id="gender"  value="female" checked>Female</td>
+                <td ><input type="radio" id="gender"  value="male" >Male</td>
+                <td</td>
+            </tr>
+            <tr>
+                <td>Course</td>
+                <td colspan="2">
+                    <select id="course" >
+                    <option value="-1" selected>Select..</option>
+                    <option value="btech" >Btech</option>
+                    <option value="BCA" >BCA</option>
+                    <option value="BBA" >BBA</option>
+                    <option value="BA" >BA</option>
+                    </select>
+                </td>
+
+                <td><div id="courseerr" style="color: red;"></div></td>
+            </tr>
+            <tr>
+                <td>Email ID</td>
+                <td colspan="2"><input type="email" id="email" placeholder="Enter your email id" value=""></td>
+                <td><div id="emailerr" style="color: red;"></div></td>
+            </tr>
+            <tr>
+                <td>Password</td>
+                <td colspan="2"><input type="password" id="pass" placeholder="Enter your password min 8 characters" value=""></td>
+                <td><div id="passerr" style="color: red;"></div></td>
+            </tr>
+            <tr>
+                <td>Re-enter</td>
+                <td colspan="2"><input type="password" id="passcheck" placeholder="Re-enter your password" value=""></td>
+                <td><div id="passcheckerr" style="color: red;"></div></td>
+            </tr>
+            <tr>
+                <td ><input type="button" value="Register me" onclick="check();"></td>
+                <td ><input type="reset" value="Reset" ></td>
+            </tr>
+        </table> 
+    </form>
+</div>  
+</body>
+</html>

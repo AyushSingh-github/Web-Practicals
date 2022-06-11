@@ -1,0 +1,57 @@
+<html lang="en">
+<head>
+        
+    <title>lab 5</title>
+    <link rel="stylesheet" href="lab-5.css">
+    <script type="text/javascript">
+
+            // ROMAN LETTERS
+            var roman_num = newArray();
+            roman_num = ["M", "CM", "D", "CD", "C", "XC", "L", "XL", "X", "IX", "V", "IV", "I"];
+            
+            // DECIMAL NUMBERS
+            var numbers = newArray();
+            numbers = [1000, 900, 500, 400, 100, 90, 50, 40, 10, 9, 5, 4, 1];
+            
+            function Roman(value)
+            {
+                if (value <= 0 || value >= 4000)
+                    return value;
+                var romanletter = "";
+                for (var i = 0; i < roman_num.length; i++)
+                {
+                    while (value >= numbers[i])
+                    {
+                        value -= numbers[i];
+                        romanletter += roman_num[i];
+                    }
+                    return romanletter;
+                }
+            }
+            
+            function roman()
+            {
+                var n;
+                n = document.getElementById("first").value;
+                document.getElementById("num").innerHTML = "Roman letter for the given number is : " + Roman(n);
+            }
+        </script>
+</head>
+
+<body>
+    <h3>Name: Ayush Singh <br />Rol no.: 1901640130021 </h3>
+    <br><br>
+
+    <table>
+        <tr>
+            <td> <input type="text" id="first" placeholder="Enter number"></td>
+        </tr>
+        <tr>
+            <td> <button onclick="roman()"> Submit </button> </td>
+        </tr>
+    </table>
+    <br>
+    <div id="num" align="center"> </div>
+ 
+</body>
+</html>

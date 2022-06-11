@@ -1,0 +1,15 @@
+h3{
+    width: 300px;
+    border: 5px solid red;
+    padding: 10px;
+    margin: 10px;
+}
+
+form{
+    margin-left: 30%;
+    margin-right: 20%;
+    border: 3px solid royalblue;
+    margin-top: 80px;
+    padding: 20px;
+    text-align: center;
+}

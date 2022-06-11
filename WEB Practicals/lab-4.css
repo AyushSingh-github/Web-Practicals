@@ -1,0 +1,17 @@
+div{
+    border: 2px dotted green; 
+    padding: 5px 5px;
+    margin: 15px 10px;
+    width: 20%;
+}
+
+h3{
+    width: 300px;
+    border: 5px solid black;
+    padding: 10px;
+    margin: 10px;
+}
+
+h2{
+    color: goldenrod;
+}
